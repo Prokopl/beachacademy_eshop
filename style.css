@@ -1,0 +1,688 @@
+/*
+	Theme Name: HTML5 Blank
+	Theme URI: http://html5blank.com
+	Description: HTML5 Blank WordPress Theme
+	Version: 1.4.3
+	Author: Todd Motto (@toddmotto)
+	Author URI: http://toddmotto.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (max-width:600px) {
+  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 100%!important;
+  }
+  .everest-forms {
+    width: 95%!important;
+  }
+}
+@media only screen and (max-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    CUSTOM STYLES - BY LUKAS PROKOP
+\*------------------------------------*/
+
+body {
+  background: url("img/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+	max-width: 1200px;
+  width: 95%;
+  min-height: 100vh;
+  height: 100%;
+	margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  /* -webkit-box-shadow: 0px 0px 90px 60px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 90px 60px rgba(255,255,255,1);
+  box-shadow: 0px 0px 90px 60px rgba(255,255,255,1); */
+}
+
+.navbar {
+  /* background: url("https://cdna.artstation.com/p/assets/images/images/001/146/574/large/ulrick-wery-tileableset2-wood.jpg?1441028620"); */
+  /* background-size: contain; */
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+}
+
+.navbar .nav-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.navbar .nav-item a {
+  color: white;
+}
+
+.navbar .nav-item a:hover {
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header {
+  background: url("img/wood.png");
+  background-size: cover;
+}
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 0.7rem;
+}
+
+.dropdown-menu a:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 25px;
+}
+.logo-img {
+  height: 200px!important;
+}
+
+h1 {
+  color: white;
+  border: 2px solid white;
+  display: inline-block;
+  padding: 3px 15px;
+  margin-top: 25px;
+}
+
+.web-name, .page-name {
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  margin: 25px;
+  display: grid;
+}
+
+main .badge {
+  font-size: 1rem;
+}
+
+#foreword {
+  font-size: 1.4rem;
+  padding: 25px;
+  background: whitesmoke;
+}
+
+#foreword a {
+  border-bottom: 1.5px dotted;
+  text-decoration: none;
+}
+
+#foreword a:hover {
+  color: #9e5406;
+}
+
+#whattobuy h2 {
+  font-size: 2.3rem;
+}
+
+.box {
+  width: 100%;
+  border: 3px solid black;
+  padding: 15px;
+  text-align: left;
+  color: black;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid black;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 6px;
+}
+
+.sb1:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  right: -11px;
+  top: 10px;
+}
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  max-height: 360px;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  font-size: 1.5rem;
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.effect-bubba {
+  background: #9e5406;
+}
+
+figure.effect-bubba img {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+  opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+  padding-top: 30%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,-20px,0);
+  transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+  padding: 20px 2.5em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+section.related {
+  display: none!important;
+}
+
+.woocommerce-tabs {
+  visibility: hidden;
+}
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+#current-category-box {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+select.form-control, select.form-control option {
+  text-align: center;
+  text-align-last: center;
+  font-size: 1.3rem;
+}
+
+select.form-control {
+  font-weight: bold;
+}
+
+.woocommerce-loop-product__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price {
+  text-align: center;
+  margin: auto;
+}
+
+li.product {
+  text-align: center;
+}
+
+h3.product_title {
+  display: block;
+  color: black;
+  border-bottom: 1.5px dashed darkgray;
+  /* border-top: 1.5px dashed black; */
+  padding: 12px 15px!important;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+h3.categ_title {
+  display: inline-block;
+  color: black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  padding: 5px 15px!important;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.categ_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_price {
+  text-align: left;
+  color: black!important;
+}
+
+.woocommerce-variation-price {
+  text-align: left;
+  color: black!important;
+  padding: 20px 0;
+}
+
+.woocommerce-variation-price span.price {
+  color: white!important;
+  font-size: initial!important;
+}
+
+.quantity input {
+  height: 36px;
+}
+
+.single_add_to_cart_button, .checkout-button, #place_order {
+  background: #96745E!important;
+}
+
+.variations td.label {
+  padding-right: 0!important;
+}
+
+ul#menu-cart {
+  list-style: none;
+}
+
+ul#menu-cart a {
+  text-decoration: none;
+}
+
+.page-name h2, .cart-collaterals h2 {
+  color: black;
+  border: 1.5px solid black;
+  display: inline-block;
+  padding: 3px 15px;
+  margin-top: 0px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+  width: 48%;
+  text-align: center;
+  margin: auto;
+  float: initial;
+}
+
+#customer_login label, #customer_details label, .woocommerce-input-wrapper,
+.woocommerce-MyAccount-content label {
+  width: 100%;
+}
+
+.woocommerce-MyAccount-content .show-password-input {
+  top: 0!important;
+}
+
+.woocommerce form .password-input input[type=password],
+.woocommerce-page form .password-input input[type=password] {
+  padding-right: 0!important;
+}
+
+#order_review_heading {
+  padding-top: 40px;
+}
+
+.woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+
+.everest-forms {
+  margin: auto;
+  width: 50%;
+}
+
+#link-on-club-homepage {
+  color: orange;
+  font-weight: bold;
+}
+
+/* nav */
+.nav {
+
+}
+/* sidebar */
+aside.sidebar {
+  display: none!important;
+}
+/* footer */
+.footer {
+  background-color: lightgray;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+#logos img {
+  max-height: 45px;
+  margin: 0 15px;
+}
+
+.copyright a {
+  color: lightgray;
+}
+
+.woocommerce-MyAccount-navigation-link--edit-address {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#post-9 .col {
+		flex-basis: auto;
+	}
+	
+}
